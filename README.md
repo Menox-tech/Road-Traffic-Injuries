@@ -21,7 +21,7 @@ After Data Cleaning and Features Engineering, we roughly followed the steps depi
 ![](https://iaml.it/blog/optimizing-sklearn-pipelines/images/pipeline-diagram.png)
 
 ### 3 Algorithms
-We tried different classifiers to work out the issue of predicting injury severity; (1)**Logistic Regressing**, (2)**KNN**, (3)**Decision Tree**, (4)**Random Forest Tree**, and (5)**Support vector machines**. As a result, the Random Forest algorithm scored higher in accuracy, followed by decision trees with a small margin of difference. In the first implementation, we didn't handle the class imbalance issue which may be contributed to the overfitting issue we found in the data. Then, we ran the algorithms again after oversampling the classes randomly using **SMOTE**. The final results showed improvement in accuracy, however, the overfitting issue still exists. Results are listed in the next table. 
+We tried different classifiers to work out the issue of predicting injury severity; (1)**Logistic Regressing**, (2)**KNN**, (3)**Decision Tree**, (4)**Random Forest Tree**, and (5)**Support vector machines**. As a result, the Random Forest algorithm scored higher in accuracy, followed by decision trees with a small margin of difference. In the first implementation, we didn't handle the class imbalance issue which may be contributed to the overfitting issue we found in the data. Then, we ran the algorithms again after oversampling the classes randomly using **SMOTE**. The final results showed arbitrary improvement in accuracy, however, the overfitting issue still exists in trees algorithms. Results are listed in the next table. 
 
 
 # Tools
