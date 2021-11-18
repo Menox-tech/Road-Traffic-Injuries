@@ -32,4 +32,4 @@ We tried different classifiers to work out the issue of predicting injury severi
 * Plotting and Visualization: Matplotlib and Seaborn
 
 # Communication
-The slides are provided here, besides details are provided at the readme of the project.
+The slides are provided [here](https://github.com/Menox-tech/Road-Traffic-Injuries/blob/main/Road%20Traffic%20Injuries%20Classifier.pptx), proposal [here](https://github.com/Menox-tech/Road-Traffic-Injuries/commit/9632e43fabbdf5f132b9356b3c41611163815bba), and final [report](https://github.com/Menox-tech/Road-Traffic-Injuries/commit/9632e43fabbdf5f132b9356b3c41611163815bba),  besides details are provided at the readme of the project.
