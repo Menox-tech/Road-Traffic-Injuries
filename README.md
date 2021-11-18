@@ -1,21 +1,28 @@
 # Road Traffic Injuries Classifier
 # Abstract 
-This repository is dedicated to predicit road traffic injuries. The used data is collected from Kaggle of about 131956 entries splitted in different files, and over than 25 features. The overall goal here is to predict 'injury severity', which is a multi-class classification issue, based on analysing the provided dataset. According to data specification, injured people are classified into four groups of 1. Unharmed 2. Killed 3. Injured hospitalized 4. Slightly injured. The data was collected in 2019 in France. Thus, for clarity purposes we had to translat the columns into English.  
+This repository is dedicated to predicting road traffic injuries. The used data is collected from Kaggle of about 131956 entries split into different files, and over 25 features. The overall goal here is to predict 'injury severity', which is a multi-class classification issue, based on analyzing the provided dataset. According to data specifications, injured people are classified into four groups of 1. Unharmed 2. Killed 3. Injured hospitalized 4. Slightly injured. The data was collected in 2019 in France. Thus, for clarity purposes, we had to translate the columns into English.  
 
 # Data
 
 
 
-# Design
-The steps we followed is depicted in the next picture. 
-![image](https://user-images.githubusercontent.com/8407636/142298668-69bc0a40-9719-44f5-8af4-c8897d2aeba1.png, source)
+# Model Design
+## Data Cleaning: 
+Removing null and duplicate values, translating columns into English, and merging the data into a single data frame for further processing.
 
 
+## Feature engineering:
+After cleaning the data, we ran a correlation analysis on the included feature. We found that `user_place `is highly correlated with and `user_category `(0.9) and `ped_company `(0.86). Thus, we eliminated the latter two and kept `user_place`. 
+
+We also eliminate other features (column) such as the `year`, as the whole dataset is dedicated for 2019 traffic injuries. Eliminated columns also include the address and `municipality ` as they can be substituted by other existing ones such as `longitude`, `latitude`, and `department`.
+
+Then, **Principle Component Analysis (PCA)** was applied to reduce dimensionality. 
+
+After Data Cleaning and Features Engineering, we roughly followed the steps depicted in the next picture. 
+![](https://iaml.it/blog/optimizing-sklearn-pipelines/images/pipeline-diagram.png)
 
 # Algorithms
-
-
-# Model
+We tried different classifiers to work out the issue of predicting injury severity; Logistic Regressing, KNN, Decision Tree, Random Forest Tree, and Support vector machines. As a result, the Random Forest algorithm scored higher in accuracy, followed by decision trees with a small margin of difference. In the first implementation, we didn't handle the class imbalance issue which may be contributed to the overfitting issue we found in the data. Then, we ran the algorithms again after oversampling the classes. The final results showed improvement in accuracy, however, the overfitting issue still exists. Results are listed in the next table. 
 
 
 # Tools
