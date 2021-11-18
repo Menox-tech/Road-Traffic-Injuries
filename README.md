@@ -27,7 +27,7 @@ We tried different classifiers to work out the issue of predicting injury severi
 # Tools
 * Data manipulation and analysis: Numpy and Pandas for numeric data
 * Data modeling: Scikit-learn
-* Plotting: Matplotlib and Seaborn
+* Plotting and Visualization: Matplotlib and Seaborn
 
 # Communication
 The slides are provided here, besides details are provided at the readme of the project.
