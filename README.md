@@ -12,9 +12,9 @@ Removing null and duplicate values, translating columns into English, and mergin
 
 
 ## Feature engineering:
-After cleaning the data, we ran a correlation analysis on the included feature. We found that `user_place `is highly correlated with and `user_category `(0.9) and `ped_company `(0.86). Thus, we eliminated the latter two and kept `user_place`. 
+After cleaning the data, we ran a correlation analysis on the included feature. We found that `user_place`is highly correlated with and `user_category`(0.9) and `ped_company`(0.86). Thus, we eliminated the latter two and kept `user_place`. 
 
-We also eliminate other features (column) such as the `year`, as the whole dataset is dedicated for 2019 traffic injuries. Eliminated columns also include the address and `municipality ` as they can be substituted by other existing ones such as `longitude`, `latitude`, and `department`.
+We also eliminate other features (column) such as the `year`, as the whole dataset is dedicated for 2019 traffic injuries. Eliminated columns also include the address and `municipality` as they can be substituted by other existing ones such as `longitude`, `latitude`, and `department`.
 
 Then, **Principle Component Analysis (PCA)** was applied to reduce dimensionality. 
 
@@ -22,7 +22,7 @@ After Data Cleaning and Features Engineering, we roughly followed the steps depi
 ![](https://iaml.it/blog/optimizing-sklearn-pipelines/images/pipeline-diagram.png)
 
 # Algorithms
-We tried different classifiers to work out the issue of predicting injury severity; Logistic Regressing, KNN, Decision Tree, Random Forest Tree, and Support vector machines. As a result, the Random Forest algorithm scored higher in accuracy, followed by decision trees with a small margin of difference. In the first implementation, we didn't handle the class imbalance issue which may be contributed to the overfitting issue we found in the data. Then, we ran the algorithms again after oversampling the classes. The final results showed improvement in accuracy, however, the overfitting issue still exists. Results are listed in the next table. 
+We tried different classifiers to work out the issue of predicting injury severity; (1)**Logistic Regressing**, (2)**KNN**, (3)**Decision Tree**, (4)**Random Forest Tree**, and (5)**Support vector machines**. As a result, the Random Forest algorithm scored higher in accuracy, followed by decision trees with a small margin of difference. In the first implementation, we didn't handle the class imbalance issue which may be contributed to the overfitting issue we found in the data. Then, we ran the algorithms again after oversampling the classes randomly using **SMOTE**. The final results showed improvement in accuracy, however, the overfitting issue still exists. Results are listed in the next table. 
 
 
 # Tools
