@@ -3,7 +3,8 @@
 This repository is dedicated to predicting road traffic injuries. The used data is collected from Kaggle of about 131956 entries split into different files, and over 25 features. The overall goal here is to predict 'injury severity', which is a multi-class classification issue, based on analyzing the provided dataset. According to data specifications, injured people are classified into four groups of 1. Unharmed 2. Killed 3. Injured hospitalized 4. Slightly injured. The data was collected in 2019 in France. Thus, for clarity purposes, we had to translate the columns into English.  
 
 # Data
-
+The [first data file](https://github.com/Menox-tech/Road-Traffic-Injuries/blob/main/caracteristiques-2019.csv) holds the accident characteristics data. It has 58413 entries and 15 columns (possible features). The columns are of different types; int, float, and objects. Similarly, the [second data file](https://github.com/Menox-tech/Road-Traffic-Injuries/blob/main/usagers-2019.csv) holds the users' (drivers) data with 132977 entries and 15 columns. The users involved in an accident include car drivers, bike riders, pedestrians, and their companies. Snippets of the two datasets are shown next.
+![dataset snippet](https://i.ibb.co/SVvdL21/snippet-1.jpg)
 
 
 # Model Design
